@@ -22,38 +22,76 @@
 	<body>
 
 	<nav>
-		<a href="index.html">Home</a>
-		<a href="rides.html">Rides</a>
-		<a href="food.html">Food</a>
+		<a href="index.html">Home</a>    
+		<a href="rides.html">Rides</a>   
 		<a href="photos.html">Photos</a>
 	</nav>
 
 <div class="container">
-		<h1>Top 10 Parks in SoCal</h1>
-				<h2> Disneyland </h2>
-					 <a href="rides.html"><img src="_pic/dca.jpg" style="width:100%;height:100%"> </a>
-				<h2> Disney California Adventure </h2>
-				<p>hi</p>
-					 <a href="rides.html"><img src="_pic/disney.jpg" style="width:100%;height:100%"></a> 
-				<h2> Lego Land </h2>
-					<a href="rides.html"><img src="_pic/legoland.jpg" style="width:100%;height:100%"></a>
-				<h2> Sea World </h2>
-					<a href="rides.html"><img src="_pic/seaw.jpg" style="width:100%;height:100%"></a>
-				<h2> Universal Studios </h2>
-					<a href="rides.html"><img src="_pic/uni.jpg" style="width:100%;height:100%"></a>
-				<h2> Knotts Berry Farm </h2>
-					<a href="rides.html"><img src="_pic/knotts.jpg" style="width:100%;height:100%"></a>
-				<h2> Six Flags Magic Mountain </h2>
-					<a href="rides.html"><img src="_pic/sixf.jpg" style="width:100%;height:100%"></a>
-				<h2> Knotts Soak City </h2>
-					<a href="rides.html"><img src="_pic/six.jpg" style="width:100%;height:100%"></a>
-				<h2> Raging Waters </h2>
-					<a href="rides.html"><img src="_pic/rag.jpg" style="width:100%;height:100%"></a>
-				<h2> Belmont Park </h2>
-					<a href="rides.html"><img src="_pic/bel.jpg" style="width:100%;height:100%"></a>
+		<h1>Top 5 Parks <br> in SoCal</h1>
+		<section id="horizontal">
+				<div class="slides">
+					<div class="drawer">
+						<img src="_pic/disney.jpg" />
+						<img src="_pic/dca.jpg" />
+						<img src="_pic/simp.jpg" />
+						<img src="_pic/sixf.jpg" />
+						<img src="_pic/knotts.jpg" />
+					</div>
+			</section>
 
-			</div>
 
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<p> These are the <b>Top 5 Amusement parks in SoCal!</b> 
+<br>If you ever visit California, make sure to check these parks out! <br> 
+They are known for their food, characters, and of course, rides! </p>
+
+<script type="text/javascript" src="_js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+
+				setTimeout(slide, 2000);
+
+				function slide() {
+					var fistImg = $("#horizontal .slides .drawer img:first");
+
+					fistImg.animate({"margin-left":"-600px"},1000, function (){
+						fistImg.appendTo("#horizontal .slides .drawer");
+						fistImg.css({"margin-left":"0px"});
+
+						setTimeout(slide, 2000);
+					});
+				}
+			});
+
+			$(document).ready(function () {
+				console.log('here we go');
+				
+				setTimeout(slide, 2000);
+				
+				//play
+				function slide() {
+				
+				//set and get
+				var firstIMG = $('#vertical .slides img:first');
+
+				//function
+				firstIMG.animate({"margin-top":"-400px"},1000, function () {
+					// console.log('I am working');
+					firstIMG.appendTo('#vertical .slides');
+					firstIMG.css({"margin-top":"0px"});
+
+					// slide();
+					setTimeout(slide, 2000);
+				});
+				//triggers
+				}
+			});
+			</script>
+
 	</body>
+
+	<footer>
+	 &copy; Dulce Velasco 2015. All rights reserved. 
+	</footer>
+
 	</html>
