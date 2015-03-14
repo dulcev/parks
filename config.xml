@@ -21,7 +21,6 @@
     <!-- Plugins -->
 
     <gap:plugin name="org.apache.cordova.battery-status" version="0.2.11" />
-    <gap:plugin name="org.apache.cordova.splashscreen" version="0.3.4" />
-    <gap:plugin name="org.apache.cordova.camera"  />
+    <gap:plugin name="org.apache.cordova.camera" version="0.3.2" />
 
 </widget>
