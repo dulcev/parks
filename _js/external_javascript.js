@@ -38,4 +38,42 @@ $(document).ready(function(){
 				//triggers
 				}
 			});
+
+
+	
+
+
+
+
+	window.addEventListener("batterystatus", onBatteryStatus, false);
+
+	function onBatteryStatus(info) {
+    // Handle the online event
+    console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+	}
+
+
+	window.addEventListener("batterycritical", onBatteryCritical, false);
+
+	function onBatteryCritical(info) {
+	    // Handle the battery critical event
+	    alert("Battery Level Critical " + info.level + "%\nRecharge Soon!");
+	}
+
+
+	window.addEventListener("batterylow", onBatteryLow, false);
+
+	function onBatteryLow(info) {
+    // Handle the battery low event
+    alert("Battery Level Low " + info.level + "%");
+	}
+
+
+
+
+
+
+
+	
+
 	
